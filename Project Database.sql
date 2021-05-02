@@ -5,6 +5,7 @@ create table if not exists banquet.admin (
 admin_id int primary key auto_increment,
 admin_name char(20),
 pass char(20));
+insert into banquet.admin(admin_name, pass) values ("hello","test123");
 create table if not exists banquet.inventory (
 item char(20) ,
  quantity int);
