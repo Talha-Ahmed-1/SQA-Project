@@ -1,6 +1,6 @@
-#%%
 from tkinter import *
-import MySQLdb
+# from MySQLdb import MySQLdb
+import mysql.connector as MySQLdb
 from tkinter import ttk
 from datetime import date
 import re
