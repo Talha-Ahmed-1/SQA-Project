@@ -1,26 +1,49 @@
 def wholeCode(res, color, width):
-    clr = []
-    wid = []
-    res_ij = []
-    for i in range(len(res)):
-        for j in range(len(res[i])):
-            if i % 2 == 0:
-                color = "honeydew3"
+    clr = []                            #1
+    wid = []                            #2
+    res_ij = []                         #3
+    for i in range(len(res)):           #4
+        for j in range(len(res[i])):    #5
+            if i % 2 == 0:              #6
+                color = "honeydew3"     #7
             else:
-                color = "white"
-            if j == 1:
-                width = 15
+                color = "white"         #8
+            if j == 1:                  #9
+                width = 15              #10
             else:
-                width = 10
+                width = 10              #11
 
-            clr.append(color)
-            wid.append(width)
-            res_ij.append(res[i][j])
+            clr.append(color)           #12
+            wid.append(width)           #13
+            res_ij.append(res[i][j])    #14
             # Label(fr, bg=color, width=width, font=("Arial", 15), text=res[i][j]).grid(row=i + 1, column=j)
-    return [clr,wid,res_ij]
+    return [clr,wid,res_ij]             #15
 
             # Stub in form of return statement is replaced with label 
             # for testing purpose because label is a module of tkinter.
+
+def driver():
+    print("*****************")
+    print("Path: 1 2 3 4 15")
+    print("*****************")
+    print(wholeCode([],None,None))
+    print("*****************")
+    print("Path: 1 2 3 4 5 4 15")
+    print("*****************")
+    print(wholeCode([()],None,None))
+    print("*****************")
+    print("Path: 1 2 3 4 5 6 7 9 10 12 13 14 5 4 15")
+    print("***************************************************")
+    print(wholeCode([(1, 'hello', 'test123')],None,None))
+    print("***************************************************")
+    print("Path: 1 2 3 4 5 6 7 9 11 12 13 14 5 4 15")
+    print("***************************************************")
+    print(wholeCode([(1, 'hello', 'test123')],None,None))
+    print("***************************************************")
+    print("Path: 1 2 3 4 5 6 8 9 11 12 13 14 5 4 15")
+    print("***************************************************")
+    print(wholeCode([(1, 'hello', 'test123'), (2, 'SQA', 'team')],None,None))
+    print("********************************************************************")
 
 def checkIfElse(color, width, i, j):
     if i % 2 == 0:
@@ -46,7 +69,7 @@ def checkNestedFor(res, color, width, i):
 
         return [color, width, res[i][j]]
 
-def driver():
+def drive():
 
     print("---------------------------------If Else Statement--------------------------------------------")
 
@@ -89,4 +112,6 @@ def driver():
     print(wholeCode(res,color,width))
 
 if __name__ == "__main__":
+    print("-----------------------------------Testing Independent Paths---------------------------------")
     driver()
+    drive()
